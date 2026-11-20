@@ -1,0 +1,31 @@
+# Dit schema laat GitHub elke 5 minuten de parkeergegevens ophalen
+# en opslaan als data.json, naast index.html.
+name: Parkeerdata ophalen
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"   # elke 5 minuten (GitHub doet het soms wat later)
+  workflow_dispatch:         # zodat je hem ook met de hand kunt starten
+
+permissions:
+  contents: write            # nodig om data.json op te slaan
+
+jobs:
+  ophalen:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repository ophalen
+        uses: actions/checkout@v4
+
+      - name: JSON downloaden
+        run: curl -sSf --max-time 30 -o nieuw.json https://p-info.vorin-amsterdam.nl/v1/ParkingLocation.json
+
+      - name: Controleren of het echte JSON is
+        run: python3 -c "import json; json.load(open('nieuw.json'))" && mv nieuw.json data.json
+
+      - name: Opslaan als er iets veranderd is
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add data.json
+          git diff --cached --quiet || (git commit -m "Parkeerdata bijgewerkt" && git push)
