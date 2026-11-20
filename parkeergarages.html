@@ -73,7 +73,7 @@
 
   <p class="legenda">
     Groen = rustig (onder 70%) · oranje = druk (70–90%) · rood = bijna vol (boven 90%) · grijs = gesloten of geen gegevens.
-    Gesloten garages en touringcarplekken tellen niet mee in het totaal.
+    Gesloten garages, touringcarplekken en fietsenstallingen tellen niet mee in het totaal.
   </p>
 
   <div class="totalen">
@@ -102,6 +102,10 @@
   <h2>Touringcars</h2>
   <p class="subtotaal" id="subTC"></p>
   <div class="raster" id="rasterTC"></div>
+
+  <h2>Fietsenstallingen</h2>
+  <p class="subtotaal" id="subFiets"></p>
+  <div class="raster" id="rasterFiets"></div>
 
   <p class="bron">
     Bron: <a href="https://p-info.vorin-amsterdam.nl/v1/ParkingLocation.json">Open Data Gemeente Amsterdam</a>.
@@ -139,8 +143,9 @@ let garages = [];
 // Maakt van "P-106_ Byzantium (opendata)" gewoon "Byzantium"
 function schoneNaam(naam) {
   return naam
-    .replace(/^.*?_\s*/, "")              // alles tot en met de eerste _ weg
-    .replace(/\s*-?\s*\(opendata\)/i, "")  // "(opendata)" weg
+    .replace(/^[A-Za-z]+[-_]\d+_\s*/, "")       // de code vooraan weg, bijv. "P-106_ " of "FP_017_ "
+    .replace(/\s*-?\s*\(opendata\)/i, "")       // "(opendata)" weg
+    .replace(/\s*\(fietsstalling\)/i, "")       // "(fietsstalling)" weg
     .trim();                               // spaties aan begin en eind weg
 }
 
@@ -153,7 +158,6 @@ function code(naam) {
 function overslaan(item) {
   const naam = item.properties.Name;
   if (item.properties.State !== "ok") return true;     // storing
-  if (/FP[-_]/i.test(naam)) return true;               // fietsenstalling
   if (/dummy|test/i.test(naam)) return true;           // testlocaties
   if (OVERSLAAN.includes(code(naam))) return true;     // bewust weggelaten
   return false;
@@ -187,6 +191,7 @@ function verwerk(data) {
         naam: schoneNaam(p.Name),
         isPR: p.Name.startsWith("PR-"),
         isTouringcar: p.Name.startsWith("PT-"),   // PT = touringcarplekken
+        isFiets: /FP[-_]/i.test(p.Name),          // FP = fietsenstalling
         vrij: vrij,
         capaciteit: capaciteit,
         langVrij: getal(p.FreeSpaceLong),
@@ -250,11 +255,12 @@ function sorteer(lijst) {
 }
 
 function toon() {
-  const gewoon = garages.filter(g => !g.isPR && !g.isTouringcar);
+  const gewoon = garages.filter(g => !g.isPR && !g.isTouringcar && !g.isFiets);
   const pr = garages.filter(g => g.isPR);
   const touringcars = garages.filter(g => g.isTouringcar);
+  const fietsen = garages.filter(g => g.isFiets);
 
-  // Totaal van alle autoplekken (touringcars tellen niet mee)
+  // Totaal van alle autoplekken (touringcars en fietsen tellen niet mee)
   const totaal = telOp([...gewoon, ...pr]);
   document.getElementById("totaalVrij").textContent = nl.format(totaal.vrij);
   document.getElementById("totaalCapaciteit").textContent = nl.format(totaal.capaciteit);
@@ -275,6 +281,11 @@ function toon() {
   document.getElementById("subTC").textContent =
     `${nl.format(tt.vrij)} van ${nl.format(tt.capaciteit)} vrij · ${tt.procent}% bezet · niet meegeteld in het totaal`;
   document.getElementById("rasterTC").innerHTML = sorteer(touringcars).map(maakKaart).join("");
+
+  const tf = telOp(fietsen);
+  document.getElementById("subFiets").textContent =
+    `${nl.format(tf.vrij)} van ${nl.format(tf.capaciteit)} vrij · ${tf.procent}% bezet · niet meegeteld in het totaal`;
+  document.getElementById("rasterFiets").innerHTML = sorteer(fietsen).map(maakKaart).join("");
 
   // Tijd van de nieuwste meting, in Nederlandse tijd
   const nieuwste = garages.map(g => new Date(g.tijd)).sort((a, b) => b - a)[0];
