@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Openbare Garages Amsterdam</title>
+<style>
+  /* ---------- Algemene opmaak ---------- */
+  body {
+    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: #f7f6f2;
+    color: #2c2c2a;
+    margin: 0;
+    padding: 24px 16px 40px;
+  }
+  .pagina { max-width: 1100px; margin: 0 auto; }
+
+  .kop {
+    display: flex; justify-content: space-between; align-items: baseline;
+    flex-wrap: wrap; gap: 8px; margin-bottom: 16px;
+  }
+  h1 { font-size: 28px; font-weight: 600; margin: 0; }
+  h2 { font-size: 20px; font-weight: 600; margin: 32px 0 4px; }
+  .bijgewerkt { font-size: 14px; color: #5f5e5a; }
+  .waarschuwing { color: #a32d2d; }
+
+  /* ---------- Totaalblok bovenaan ---------- */
+  .totalen {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+  }
+  .totaal { background: #ebe9e2; border-radius: 10px; padding: 14px 16px; }
+  .totaal .label { font-size: 14px; color: #5f5e5a; margin: 0; }
+  .totaal .getal { font-size: 28px; font-weight: 600; margin: 2px 0 0; }
+
+  .subtotaal { font-size: 14px; color: #5f5e5a; margin: 0 0 12px; }
+
+  .bediening { margin: 20px 0 0; font-size: 14px; }
+  .bediening select { font-size: 14px; padding: 4px 6px; border-radius: 6px; }
+
+  /* ---------- Kaartjes per garage ---------- */
+  .raster {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 12px;
+  }
+  .kaart { border-radius: 12px; padding: 12px 14px; border: 1px solid; }
+  .kaart .naam { font-size: 16px; font-weight: 600; margin: 0; }
+  .kaart .regel { font-size: 14px; margin: 0; }
+  .balk { height: 8px; border-radius: 4px; background: rgba(0,0,0,0.08); overflow: hidden; margin: 8px 0 6px; }
+  .balk span { display: block; height: 100%; }
+
+  /* De kleuren: groen = rustig, oranje = druk, rood = bijna vol, grijs = gesloten */
+  .groen  { background: #eaf3de; border-color: #97c459; color: #3b6d11; }
+  .groen  .balk span { background: #639922; }
+  .oranje { background: #faeeda; border-color: #ef9f27; color: #854f0b; }
+  .oranje .balk span { background: #ba7517; }
+  .rood   { background: #fcebeb; border-color: #f09595; color: #a32d2d; }
+  .rood   .balk span { background: #e24b4a; }
+  .grijs  { background: #f1efe8; border-color: #b4b2a9; color: #5f5e5a; }
+
+  .legenda { font-size: 14px; font-weight: 600; color: #444441; margin: 0 0 16px; }
+  .bron { font-size: 13px; color: #5f5e5a; margin-top: 32px; }
+  .bron a { color: #185fa5; }
+</style>
+</head>
+<body>
+<div class="pagina">
+
+  <div class="kop">
+    <h1>Openbare Garages Amsterdam</h1>
+    <span class="bijgewerkt" id="bijgewerkt">Gegevens laden…</span>
+  </div>
+
+  <p class="legenda">
+    Groen = rustig (onder 70%) · oranje = druk (70–90%) · rood = bijna vol (boven 90%) · grijs = gesloten of geen gegevens.
+    Gesloten garages en touringcarplekken tellen niet mee in het totaal.
+  </p>
+
+  <div class="totalen">
+    <div class="totaal"><p class="label">Vrije plaatsen kort parkeren</p><p class="getal" id="totaalVrij">–</p></div>
+    <div class="totaal"><p class="label">Capaciteit kort parkeren</p><p class="getal" id="totaalCapaciteit">–</p></div>
+    <div class="totaal"><p class="label">Bezettingsgraad kort parkeren</p><p class="getal" id="totaalProcent">–</p></div>
+  </div>
+
+  <div class="bediening">
+    <label for="sortering">Sorteren op:</label>
+    <select id="sortering">
+      <option value="naam">Naam (A–Z)</option>
+      <option value="drukte">Drukste eerst</option>
+      <option value="vrij">Meeste vrije plaatsen</option>
+    </select>
+  </div>
+
+  <h2>Parkeergarages</h2>
+  <p class="subtotaal" id="subGarages"></p>
+  <div class="raster" id="rasterGarages"></div>
+
+  <h2>P+R-garages</h2>
+  <p class="subtotaal" id="subPR"></p>
+  <div class="raster" id="rasterPR"></div>
+
+  <h2>Touringcars</h2>
+  <p class="subtotaal" id="subTC"></p>
+  <div class="raster" id="rasterTC"></div>
+
+  <p class="bron">
+    Bron: <a href="https://p-info.vorin-amsterdam.nl/v1/ParkingLocation.json">Open Data Gemeente Amsterdam</a>.
+    De pagina ververst zichzelf elke minuut.
+  </p>
+</div>
+
+<script>
+// ================= INSTELLINGEN =================
+
+// Het bestand dat GitHub elke paar minuten voor ons klaarzet
+const DATABESTAND = "data.json";
+
+// Hoe vaak de pagina opnieuw kijkt (in milliseconden: 60000 = 1 minuut)
+const VERVERS_ELKE = 60000;
+
+// Garages die we bewust overslaan (op code, want die verandert niet)
+const OVERSLAAN = [
+  "P-108", // Nieuwendijk  (gegevens kloppen niet)
+  "P-105", // Euro Parking (gegevens kloppen niet)
+  "P-102"  // Olympisch Stadion (dubbel, we houden de P+R-versie)
+];
+
+// Nederlandse notatie voor getallen (1.563 in plaats van 1563)
+const nl = new Intl.NumberFormat("nl-NL");
+
+// De gegevens van de laatste keer ophalen bewaren we hier,
+// zodat sorteren werkt zonder opnieuw op te halen
+let garages = [];
+
+
+// ================= GEGEVENS OPSCHONEN =================
+
+// Maakt van "P-106_ Byzantium (opendata)" gewoon "Byzantium"
+function schoneNaam(naam) {
+  return naam
+    .replace(/^.*?_\s*/, "")              // alles tot en met de eerste _ weg
+    .replace(/\s*-?\s*\(opendata\)/i, "")  // "(opendata)" weg
+    .trim();                               // spaties aan begin en eind weg
+}
+
+// Haalt de code eruit: "P-106_ Byzantium" wordt "P-106"
+function code(naam) {
+  return naam.split("_")[0].trim();
+}
+
+// Moet deze garage worden overgeslagen?
+function overslaan(item) {
+  const naam = item.properties.Name;
+  if (item.properties.State !== "ok") return true;     // storing
+  if (/FP[-_]/i.test(naam)) return true;               // fietsenstalling
+  if (/dummy|test/i.test(naam)) return true;           // testlocaties
+  if (OVERSLAAN.includes(code(naam))) return true;     // bewust weggelaten
+  return false;
+}
+
+// Zet een tekst als "1563" om naar een getal; leeg wordt 0
+function getal(tekst) {
+  const n = parseInt(tekst, 10);
+  return isNaN(n) ? 0 : n;
+}
+
+// Zet de ruwe JSON om naar een nette lijst garages
+function verwerk(data) {
+  return data.features
+    .filter(item => !overslaan(item))
+    .map(item => {
+      const p = item.properties;
+      const capaciteit = getal(p.ShortCapacity);
+      const vrij = getal(p.FreeSpaceShort);
+      const gesloten = p.Status === "GESLOTEN";
+      const geenGegevens = capaciteit === 0;
+
+      // Bezettingsgraad = deel dat bezet is, in procenten
+      let procent = null;
+      if (!gesloten && !geenGegevens) {
+        procent = Math.round((capaciteit - vrij) / capaciteit * 100);
+        procent = Math.min(100, Math.max(0, procent)); // tussen 0 en 100 houden
+      }
+
+      return {
+        naam: schoneNaam(p.Name),
+        isPR: p.Name.startsWith("PR-"),
+        isTouringcar: p.Name.startsWith("PT-"),   // PT = touringcarplekken
+        vrij: vrij,
+        capaciteit: capaciteit,
+        langVrij: getal(p.FreeSpaceLong),
+        langCapaciteit: getal(p.LongCapacity),
+        gesloten: gesloten,
+        geenGegevens: geenGegevens,
+        procent: procent,
+        tijd: p.PubDate
+      };
+    });
+}
+
+
+// ================= TONEN OP DE PAGINA =================
+
+function kleur(garage) {
+  if (garage.procent === null) return "grijs";
+  if (garage.procent > 90) return "rood";
+  if (garage.procent >= 70) return "oranje";
+  return "groen";
+}
+
+function maakKaart(g) {
+  let inhoud;
+  if (g.gesloten) {
+    inhoud = `<div class="balk"></div><p class="regel">Gesloten</p>`;
+  } else if (g.geenGegevens) {
+    inhoud = `<div class="balk"></div><p class="regel">Geen gegevens</p>`;
+  } else {
+    inhoud = `
+      <div class="balk"><span style="width:${g.procent}%"></span></div>
+      <p class="regel">${g.procent}% bezet · ${nl.format(g.vrij)} van ${nl.format(g.capaciteit)} vrij</p>`;
+  }
+  // Extra regel voor lang parkeren (vergunninghouders), alleen als die er is
+  if (g.langCapaciteit > 0 && !g.gesloten) {
+    inhoud += `<p class="regel">Vergunninghouders: ${nl.format(g.langVrij)} van ${nl.format(g.langCapaciteit)} vrij</p>`;
+  }
+  return `<div class="kaart ${kleur(g)}"><p class="naam">${g.naam}</p>${inhoud}</div>`;
+}
+
+// Telt vrije plaatsen en capaciteit op (alleen garages die open zijn en cijfers hebben)
+function telOp(lijst) {
+  const meetellen = lijst.filter(g => g.procent !== null);
+  const vrij = meetellen.reduce((som, g) => som + g.vrij, 0);
+  const capaciteit = meetellen.reduce((som, g) => som + g.capaciteit, 0);
+  const procent = capaciteit > 0 ? Math.round((capaciteit - vrij) / capaciteit * 100) : 0;
+  return { vrij, capaciteit, procent };
+}
+
+function sorteer(lijst) {
+  const keuze = document.getElementById("sortering").value;
+  const kopie = [...lijst];
+  if (keuze === "drukte") {
+    kopie.sort((a, b) => (b.procent ?? -1) - (a.procent ?? -1));
+  } else if (keuze === "vrij") {
+    kopie.sort((a, b) => b.vrij - a.vrij);
+  } else {
+    kopie.sort((a, b) => a.naam.localeCompare(b.naam, "nl"));
+  }
+  return kopie;
+}
+
+function toon() {
+  const gewoon = garages.filter(g => !g.isPR && !g.isTouringcar);
+  const pr = garages.filter(g => g.isPR);
+  const touringcars = garages.filter(g => g.isTouringcar);
+
+  // Totaal van alle autoplekken (touringcars tellen niet mee)
+  const totaal = telOp([...gewoon, ...pr]);
+  document.getElementById("totaalVrij").textContent = nl.format(totaal.vrij);
+  document.getElementById("totaalCapaciteit").textContent = nl.format(totaal.capaciteit);
+  document.getElementById("totaalProcent").textContent = totaal.procent + "%";
+
+  // Per blok
+  const tg = telOp(gewoon);
+  document.getElementById("subGarages").textContent =
+    `${nl.format(tg.vrij)} van ${nl.format(tg.capaciteit)} vrij kort parkeren · ${tg.procent}% bezet`;
+  const tp = telOp(pr);
+  document.getElementById("subPR").textContent =
+    `${nl.format(tp.vrij)} van ${nl.format(tp.capaciteit)} vrij kort parkeren · ${tp.procent}% bezet`;
+
+  document.getElementById("rasterGarages").innerHTML = sorteer(gewoon).map(maakKaart).join("");
+  document.getElementById("rasterPR").innerHTML = sorteer(pr).map(maakKaart).join("");
+
+  const tt = telOp(touringcars);
+  document.getElementById("subTC").textContent =
+    `${nl.format(tt.vrij)} van ${nl.format(tt.capaciteit)} vrij · ${tt.procent}% bezet · niet meegeteld in het totaal`;
+  document.getElementById("rasterTC").innerHTML = sorteer(touringcars).map(maakKaart).join("");
+
+  // Tijd van de nieuwste meting, in Nederlandse tijd
+  const nieuwste = garages.map(g => new Date(g.tijd)).sort((a, b) => b - a)[0];
+  const tekst = nieuwste.toLocaleString("nl-NL", {
+    timeZone: "Europe/Amsterdam",
+    weekday: "long", day: "numeric", month: "long",
+    hour: "2-digit", minute: "2-digit"
+  });
+  const minutenOud = (Date.now() - nieuwste) / 60000;
+  const el = document.getElementById("bijgewerkt");
+  el.textContent = "Bijgewerkt " + tekst;
+  el.classList.toggle("waarschuwing", minutenOud > 30);
+  if (minutenOud > 30) el.textContent += " (let op: meer dan een half uur oud)";
+}
+
+
+// ================= OPHALEN EN VERVERSEN =================
+
+async function haalOp() {
+  try {
+    // "?t=..." zorgt dat de browser niet een oude, bewaarde versie gebruikt
+    const antwoord = await fetch(DATABESTAND + "?t=" + Date.now());
+    const data = await antwoord.json();
+    garages = verwerk(data);
+    toon();
+  } catch (fout) {
+    document.getElementById("bijgewerkt").textContent =
+      "Gegevens konden niet worden geladen. We proberen het zo opnieuw.";
+    console.error(fout);
+  }
+}
+
+document.getElementById("sortering").addEventListener("change", toon);
+haalOp();                           // meteen bij openen
+setInterval(haalOp, VERVERS_ELKE);  // en daarna elke minuut
+</script>
+</body>
+</html>
