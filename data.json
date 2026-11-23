@@ -8,12 +8,12 @@
       "coordinates" : [ 52.362386365926604, 4.883357405662521 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:28:16Z",
+      "PubDate" : "2026-11-23T12:34:46Z",
       "Name" : "FP-012_ Leidseplein ",
       "Type" : "parkinglocation",
       "State" : "ok",
       "Status" : "GETAL",
-      "FreeSpaceShort" : "1223",
+      "FreeSpaceShort" : "1219",
       "ShortCapacity" : "1973",
       "FreeSpaceLong" : "",
       "LongCapacity" : ""
@@ -26,7 +26,7 @@
       "coordinates" : [ 52.337235, 4.873558 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:28:16Z",
+      "PubDate" : "2026-11-23T12:34:46Z",
       "Name" : "FP-001_ Mahlerplein",
       "Type" : "parkinglocation",
       "State" : "ok",
@@ -44,12 +44,12 @@
       "coordinates" : [ 52.36719576541883, 4.891126509262094 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:28:16Z",
+      "PubDate" : "2026-11-23T12:35:16Z",
       "Name" : "P-127_ Kalverstraat (opendata)",
       "Type" : "parkinglocation",
       "State" : "ok",
       "Status" : "GETAL",
-      "FreeSpaceShort" : "28",
+      "FreeSpaceShort" : "17",
       "ShortCapacity" : "84",
       "FreeSpaceLong" : "",
       "LongCapacity" : ""
@@ -62,12 +62,12 @@
       "coordinates" : [ 52.355996, 4.886662 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:28:17Z",
+      "PubDate" : "2026-11-23T12:35:17Z",
       "Name" : "P-133_ Albert Cuyp",
       "Type" : "parkinglocation",
       "State" : "ok",
       "Status" : "GETAL",
-      "FreeSpaceShort" : "110",
+      "FreeSpaceShort" : "103",
       "ShortCapacity" : "600",
       "FreeSpaceLong" : "10",
       "LongCapacity" : "10"
@@ -80,12 +80,12 @@
       "coordinates" : [ 52.3619, 4.88001 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:28:16Z",
+      "PubDate" : "2026-11-23T12:35:16Z",
       "Name" : "P-106_ Byzantium (opendata)",
       "Type" : "parkinglocation",
       "State" : "ok",
       "Status" : "GETAL",
-      "FreeSpaceShort" : "324",
+      "FreeSpaceShort" : "315",
       "ShortCapacity" : "446",
       "FreeSpaceLong" : "",
       "LongCapacity" : ""
@@ -98,13 +98,13 @@
       "coordinates" : [ 52.377367, 4.91862 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:27:57Z",
+      "PubDate" : "2026-11-23T12:34:57Z",
       "Name" : "P-134_ IJ-oever Centrum",
       "Type" : "parkinglocation",
       "State" : "ok",
       "Status" : "GETAL",
-      "FreeSpaceShort" : "75",
-      "ShortCapacity" : "81",
+      "FreeSpaceShort" : "70",
+      "ShortCapacity" : "82",
       "FreeSpaceLong" : "9",
       "LongCapacity" : "15"
     }
@@ -116,12 +116,12 @@
       "coordinates" : [ 52.37639, 4.89459 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:28:16Z",
+      "PubDate" : "2026-11-23T12:35:16Z",
       "Name" : "P-108_ Nieuwendijk (opendata)",
       "Type" : "parkinglocation",
       "State" : "ok",
       "Status" : "GETAL",
-      "FreeSpaceShort" : "406",
+      "FreeSpaceShort" : "386",
       "ShortCapacity" : "410",
       "FreeSpaceLong" : "",
       "LongCapacity" : ""
@@ -134,14 +134,14 @@
       "coordinates" : [ 52.36758, 4.90041 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:28:16Z",
+      "PubDate" : "2026-11-23T12:35:16Z",
       "Name" : "P-110_ Stadhuis",
       "Type" : "parkinglocation",
       "State" : "ok",
       "Status" : "GETAL",
-      "FreeSpaceShort" : "95",
+      "FreeSpaceShort" : "64",
       "ShortCapacity" : "399",
-      "FreeSpaceLong" : "190",
+      "FreeSpaceLong" : "192",
       "LongCapacity" : "209"
     }
   }, {
@@ -152,12 +152,12 @@
       "coordinates" : [ 52.31765, 4.95546 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:28:16Z",
+      "PubDate" : "2026-11-23T12:35:16Z",
       "Name" : "P-223_ Amsterdamse Poort P23 (opendata)",
       "Type" : "parkinglocation",
       "State" : "ok",
       "Status" : "GETAL",
-      "FreeSpaceShort" : "135",
+      "FreeSpaceShort" : "124",
       "ShortCapacity" : "346",
       "FreeSpaceLong" : "",
       "LongCapacity" : ""
@@ -170,12 +170,12 @@
       "coordinates" : [ 52.36988, 4.96447 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:28:16Z",
+      "PubDate" : "2026-11-23T12:35:16Z",
       "Name" : "PR-004_ Zeeburg 2",
       "Type" : "parkinglocation",
       "State" : "ok",
       "Status" : "GETAL",
-      "FreeSpaceShort" : "36",
+      "FreeSpaceShort" : "27",
       "ShortCapacity" : "163",
       "FreeSpaceLong" : "5",
       "LongCapacity" : "5"
@@ -188,12 +188,12 @@
       "coordinates" : [ 52.3078, 4.9413 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:27:48Z",
+      "PubDate" : "2026-11-23T12:34:48Z",
       "Name" : "P-210_ P10 Plaza Arena",
       "Type" : "parkinglocation",
       "State" : "ok",
       "Status" : "GETAL",
-      "FreeSpaceShort" : "266",
+      "FreeSpaceShort" : "261",
       "ShortCapacity" : "376",
       "FreeSpaceLong" : "380",
       "LongCapacity" : "694"
@@ -206,12 +206,12 @@
       "coordinates" : [ 52.3338, 4.864 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:28:16Z",
+      "PubDate" : "2026-11-23T12:35:16Z",
       "Name" : "P-303_ VU campus",
       "Type" : "parkinglocation",
       "State" : "ok",
-      "Status" : "GETAL",
-      "FreeSpaceShort" : "19",
+      "Status" : "VOL",
+      "FreeSpaceShort" : "4",
       "ShortCapacity" : "616",
       "FreeSpaceLong" : "",
       "LongCapacity" : ""
@@ -224,7 +224,7 @@
       "coordinates" : [ 52.37728080784957, 4.901943486816407 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:24:16Z",
+      "PubDate" : "2026-11-23T12:34:16Z",
       "Name" : "FP_017_ Stationsplein Oost (fietsstalling)",
       "Type" : "parkinglocation",
       "State" : "error",
@@ -242,7 +242,7 @@
       "coordinates" : [ 52.377864, 4.915205 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:27:50Z",
+      "PubDate" : "2026-11-23T12:34:50Z",
       "Name" : "PT-002_ TTA",
       "Type" : "parkinglocation",
       "State" : "ok",
@@ -260,7 +260,7 @@
       "coordinates" : [ 52.353435, 4.890097 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:28:16Z",
+      "PubDate" : "2026-11-23T12:34:46Z",
       "Name" : "FP-006_ Ferdinand Bolstraat",
       "Type" : "parkinglocation",
       "State" : "ok",
@@ -278,12 +278,12 @@
       "coordinates" : [ 52.38462, 4.86627 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:28:16Z",
+      "PubDate" : "2026-11-23T12:35:16Z",
       "Name" : "P-114_ Westergasfabriek (opendata)",
       "Type" : "parkinglocation",
       "State" : "ok",
       "Status" : "GETAL",
-      "FreeSpaceShort" : "387",
+      "FreeSpaceShort" : "379",
       "ShortCapacity" : "504",
       "FreeSpaceLong" : "",
       "LongCapacity" : ""
@@ -296,7 +296,7 @@
       "coordinates" : [ 52.37862998784766, 4.876779001838685 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:28:16Z",
+      "PubDate" : "2026-11-23T12:35:16Z",
       "Name" : "P-139_ Singelgracht - Marnix (opendata)",
       "Type" : "parkinglocation",
       "State" : "ok",
@@ -314,14 +314,14 @@
       "coordinates" : [ 52.313, 4.93866 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:27:47Z",
+      "PubDate" : "2026-11-23T12:34:47Z",
       "Name" : "P-204_ P4 Villa Arena",
       "Type" : "parkinglocation",
       "State" : "ok",
       "Status" : "GETAL",
-      "FreeSpaceShort" : "324",
+      "FreeSpaceShort" : "302",
       "ShortCapacity" : "347",
-      "FreeSpaceLong" : "398",
+      "FreeSpaceLong" : "391",
       "LongCapacity" : "477"
     }
   }, {
@@ -332,12 +332,12 @@
       "coordinates" : [ 52.346638, 4.918427 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:28:16Z",
+      "PubDate" : "2026-11-23T12:34:46Z",
       "Name" : "FP-004_ Julianaplein ",
       "Type" : "parkinglocation",
       "State" : "ok",
       "Status" : "GETAL",
-      "FreeSpaceShort" : "939",
+      "FreeSpaceShort" : "921",
       "ShortCapacity" : "2966",
       "FreeSpaceLong" : "",
       "LongCapacity" : ""
@@ -350,7 +350,7 @@
       "coordinates" : [ 52.334, 4.8595 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:28:16Z",
+      "PubDate" : "2026-11-23T12:35:16Z",
       "Name" : "P-301_ VUmc (westflank)",
       "Type" : "parkinglocation",
       "State" : "error",
@@ -368,12 +368,12 @@
       "coordinates" : [ 52.31086, 4.93985 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:28:16Z",
+      "PubDate" : "2026-11-23T12:35:16Z",
       "Name" : "P-203_ P3 Mikado",
       "Type" : "parkinglocation",
       "State" : "ok",
       "Status" : "VRIJ",
-      "FreeSpaceShort" : "47",
+      "FreeSpaceShort" : "38",
       "ShortCapacity" : "190",
       "FreeSpaceLong" : "5",
       "LongCapacity" : "5"
@@ -386,12 +386,12 @@
       "coordinates" : [ 52.36242, 4.891446 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:28:16Z",
+      "PubDate" : "2026-11-23T12:35:16Z",
       "Name" : "P-131_ Prins & Keizer (opendata)",
       "Type" : "parkinglocation",
       "State" : "ok",
       "Status" : "GETAL",
-      "FreeSpaceShort" : "39",
+      "FreeSpaceShort" : "34",
       "ShortCapacity" : "137",
       "FreeSpaceLong" : "",
       "LongCapacity" : ""
@@ -404,12 +404,12 @@
       "coordinates" : [ 52.37601, 4.90901 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:28:16Z",
+      "PubDate" : "2026-11-23T12:35:16Z",
       "Name" : "P-115_ Oosterdok",
       "Type" : "parkinglocation",
       "State" : "ok",
       "Status" : "VRIJ",
-      "FreeSpaceShort" : "1319",
+      "FreeSpaceShort" : "1290",
       "ShortCapacity" : "1800",
       "FreeSpaceLong" : "",
       "LongCapacity" : ""
@@ -422,7 +422,7 @@
       "coordinates" : [ 52.352791, 4.890476 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:28:16Z",
+      "PubDate" : "2026-11-23T12:34:46Z",
       "Name" : "FP-005_ Ceintuurbaan ",
       "Type" : "parkinglocation",
       "State" : "ok",
@@ -440,13 +440,13 @@
       "coordinates" : [ 52.37, 4.893 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:27:47Z",
+      "PubDate" : "2026-11-23T12:34:47Z",
       "Name" : "P-136_ Rokin",
       "Type" : "parkinglocation",
       "State" : "ok",
       "Status" : "GETAL",
-      "FreeSpaceShort" : "26",
-      "ShortCapacity" : "279",
+      "FreeSpaceShort" : "20",
+      "ShortCapacity" : "276",
       "FreeSpaceLong" : "10",
       "LongCapacity" : "10"
     }
@@ -458,7 +458,7 @@
       "coordinates" : [ 52.341251, 4.873056 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:24:16Z",
+      "PubDate" : "2026-11-23T12:34:16Z",
       "Name" : "FP-002_ Strawinskylaan ",
       "Type" : "parkinglocation",
       "State" : "error",
@@ -476,7 +476,7 @@
       "coordinates" : [ 52.31409, 4.94105 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:27:56Z",
+      "PubDate" : "2026-11-23T12:34:56Z",
       "Name" : "PR-011_ ArenA",
       "Type" : "parkinglocation",
       "State" : "ok",
@@ -494,12 +494,12 @@
       "coordinates" : [ 52.34703, 4.91902 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:28:14Z",
+      "PubDate" : "2026-11-23T12:35:14Z",
       "Name" : "FP-003_ Prorail Amsterdam Amstel (fietsstalling)",
       "Type" : "parkinglocation",
       "State" : "ok",
       "Status" : "GETAL",
-      "FreeSpaceShort" : "939",
+      "FreeSpaceShort" : "919",
       "ShortCapacity" : "2966",
       "FreeSpaceLong" : "",
       "LongCapacity" : ""
@@ -512,12 +512,12 @@
       "coordinates" : [ 52.358753, 4.882659 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:28:16Z",
+      "PubDate" : "2026-11-23T12:35:16Z",
       "Name" : "PT-007_ Museumplein - (opendata)",
       "Type" : "parkinglocation",
       "State" : "ok",
       "Status" : "GETAL",
-      "FreeSpaceShort" : "16",
+      "FreeSpaceShort" : "14",
       "ShortCapacity" : "25",
       "FreeSpaceLong" : "",
       "LongCapacity" : ""
@@ -530,7 +530,7 @@
       "coordinates" : [ 52.41701848611019, 4.4912651001281745 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:24:15Z",
+      "PubDate" : "2026-11-23T12:34:15Z",
       "Name" : "Dummy Melkweg",
       "Type" : "parkinglocation",
       "State" : "error",
@@ -548,7 +548,7 @@
       "coordinates" : [ 52.33966608683726, 4.88980942630004 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:24:16Z",
+      "PubDate" : "2026-11-23T12:34:16Z",
       "Name" : "PR-009_ RAI",
       "Type" : "parkinglocation",
       "State" : "ok",
@@ -566,12 +566,12 @@
       "coordinates" : [ 52.31413, 4.950568542327871 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:28:16Z",
+      "PubDate" : "2026-11-23T12:35:16Z",
       "Name" : "P-221_ Amsterdamse Poort P21 (opendata)",
       "Type" : "parkinglocation",
       "State" : "ok",
       "Status" : "GETAL",
-      "FreeSpaceShort" : "43",
+      "FreeSpaceShort" : "48",
       "ShortCapacity" : "244",
       "FreeSpaceLong" : "",
       "LongCapacity" : ""
@@ -584,14 +584,14 @@
       "coordinates" : [ 52.38482, 4.89475 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:28:16Z",
+      "PubDate" : "2026-11-23T12:35:16Z",
       "Name" : "P-125_ IJdock",
       "Type" : "parkinglocation",
       "State" : "ok",
       "Status" : "GETAL",
-      "FreeSpaceShort" : "226",
+      "FreeSpaceShort" : "229",
       "ShortCapacity" : "244",
-      "FreeSpaceLong" : "28",
+      "FreeSpaceLong" : "32",
       "LongCapacity" : "70"
     }
   }, {
@@ -602,14 +602,14 @@
       "coordinates" : [ 52.366058, 4.898584 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:28:16Z",
+      "PubDate" : "2026-11-23T12:35:16Z",
       "Name" : "P-126_ Rembrandtplein ",
       "Type" : "parkinglocation",
       "State" : "ok",
       "Status" : "GETAL",
       "FreeSpaceShort" : "92",
       "ShortCapacity" : "116",
-      "FreeSpaceLong" : "7",
+      "FreeSpaceLong" : "8",
       "LongCapacity" : "16"
     }
   }, {
@@ -620,14 +620,14 @@
       "coordinates" : [ 52.312, 4.93866 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:27:49Z",
+      "PubDate" : "2026-11-23T12:34:49Z",
       "Name" : "P-205_ P5 Villa ArenA",
       "Type" : "parkinglocation",
       "State" : "ok",
       "Status" : "GETAL",
-      "FreeSpaceShort" : "91",
+      "FreeSpaceShort" : "78",
       "ShortCapacity" : "251",
-      "FreeSpaceLong" : "354",
+      "FreeSpaceLong" : "344",
       "LongCapacity" : "564"
     }
   }, {
@@ -638,12 +638,12 @@
       "coordinates" : [ 52.3362, 4.8609 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:28:16Z",
+      "PubDate" : "2026-11-23T12:35:16Z",
       "Name" : "P-302_ VUmc (ACTA)",
       "Type" : "parkinglocation",
       "State" : "ok",
       "Status" : "VRIJ",
-      "FreeSpaceShort" : "77",
+      "FreeSpaceShort" : "44",
       "ShortCapacity" : "449",
       "FreeSpaceLong" : "",
       "LongCapacity" : ""
@@ -656,12 +656,12 @@
       "coordinates" : [ 52.380339, 4.900249 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:28:16Z",
+      "PubDate" : "2026-11-23T12:34:46Z",
       "Name" : "FP-015_ IJboulevard ",
       "Type" : "parkinglocation",
       "State" : "ok",
       "Status" : "GETAL",
-      "FreeSpaceShort" : "1738",
+      "FreeSpaceShort" : "1703",
       "ShortCapacity" : "3968",
       "FreeSpaceLong" : "",
       "LongCapacity" : ""
@@ -674,7 +674,7 @@
       "coordinates" : [ 52.36575469587723, 4.892643216804493 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:28:16Z",
+      "PubDate" : "2026-11-23T12:34:46Z",
       "Name" : "FP-007_ Reguliers ",
       "Type" : "parkinglocation",
       "State" : "ok",
@@ -692,7 +692,7 @@
       "coordinates" : [ 52.33675733290546, 4.861061000000002 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:28:16Z",
+      "PubDate" : "2026-11-23T12:35:16Z",
       "Name" : "PR-304_ VUmc",
       "Type" : "parkinglocation",
       "State" : "ok",
@@ -710,7 +710,7 @@
       "coordinates" : [ 52.36607722092854, 4.893734142074573 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:28:16Z",
+      "PubDate" : "2026-11-23T12:34:46Z",
       "Name" : "FP-009_ de Munt",
       "Type" : "parkinglocation",
       "State" : "ok",
@@ -728,14 +728,14 @@
       "coordinates" : [ 52.3444, 4.8536 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:28:16Z",
+      "PubDate" : "2026-11-23T12:35:16Z",
       "Name" : "PR-002_ Olympisch Stadion P+R",
       "Type" : "parkinglocation",
       "State" : "ok",
-      "Status" : "GETAL",
-      "FreeSpaceShort" : "22",
+      "Status" : "VOL",
+      "FreeSpaceShort" : "4",
       "ShortCapacity" : "250",
-      "FreeSpaceLong" : "23",
+      "FreeSpaceLong" : "18",
       "LongCapacity" : "200"
     }
   }, {
@@ -746,12 +746,12 @@
       "coordinates" : [ 52.31476, 4.95268 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:28:16Z",
+      "PubDate" : "2026-11-23T12:35:16Z",
       "Name" : "P-222_ Amsterdamse Poort P22 (opendata)",
       "Type" : "parkinglocation",
       "State" : "ok",
       "Status" : "GETAL",
-      "FreeSpaceShort" : "44",
+      "FreeSpaceShort" : "39",
       "ShortCapacity" : "405",
       "FreeSpaceLong" : "",
       "LongCapacity" : ""
@@ -764,7 +764,7 @@
       "coordinates" : [ 52.380247639618, 4.900221508628846 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:24:16Z",
+      "PubDate" : "2026-11-23T12:34:16Z",
       "Name" : "FP-011_ IJ-Zijde West (fietsstalling)",
       "Type" : "parkinglocation",
       "State" : "error",
@@ -782,12 +782,12 @@
       "coordinates" : [ 52.357382, 4.892389 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:28:16Z",
+      "PubDate" : "2026-11-23T12:35:16Z",
       "Name" : "P-130_ Heinekenplein (opendata)",
       "Type" : "parkinglocation",
       "State" : "ok",
       "Status" : "GETAL",
-      "FreeSpaceShort" : "154",
+      "FreeSpaceShort" : "146",
       "ShortCapacity" : "256",
       "FreeSpaceLong" : "",
       "LongCapacity" : ""
@@ -800,12 +800,12 @@
       "coordinates" : [ 52.35694, 4.92911 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:28:16Z",
+      "PubDate" : "2026-11-23T12:35:16Z",
       "Name" : "P-120_ Oostpoort (opendata)",
       "Type" : "parkinglocation",
       "State" : "ok",
       "Status" : "GETAL",
-      "FreeSpaceShort" : "306",
+      "FreeSpaceShort" : "298",
       "ShortCapacity" : "458",
       "FreeSpaceLong" : "",
       "LongCapacity" : ""
@@ -818,12 +818,12 @@
       "coordinates" : [ 52.36988, 4.87663 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:28:16Z",
+      "PubDate" : "2026-11-23T12:35:16Z",
       "Name" : "P-105_ Euro Parking (opendata)",
       "Type" : "parkinglocation",
       "State" : "ok",
       "Status" : "GETAL",
-      "FreeSpaceShort" : "235",
+      "FreeSpaceShort" : "219",
       "ShortCapacity" : "710",
       "FreeSpaceLong" : "",
       "LongCapacity" : ""
@@ -836,12 +836,12 @@
       "coordinates" : [ 52.37382, 4.89508 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:28:16Z",
+      "PubDate" : "2026-11-23T12:35:16Z",
       "Name" : "P-109_ Bijenkorf (opendata)",
       "Type" : "parkinglocation",
       "State" : "ok",
       "Status" : "GETAL",
-      "FreeSpaceShort" : "331",
+      "FreeSpaceShort" : "302",
       "ShortCapacity" : "431",
       "FreeSpaceLong" : "",
       "LongCapacity" : ""
@@ -854,7 +854,7 @@
       "coordinates" : [ 52.33751, 4.89041 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:28:14Z",
+      "PubDate" : "2026-11-23T12:35:14Z",
       "Name" : "FP-019_ Prorail Amsterdam RAI ",
       "Type" : "parkinglocation",
       "State" : "ok",
@@ -872,14 +872,14 @@
       "coordinates" : [ 52.31409, 4.943 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:27:56Z",
+      "PubDate" : "2026-11-23T12:34:56Z",
       "Name" : "P-201_ P1 ArenA",
       "Type" : "parkinglocation",
       "State" : "ok",
       "Status" : "GETAL",
-      "FreeSpaceShort" : "1675",
+      "FreeSpaceShort" : "1659",
       "ShortCapacity" : "1811",
-      "FreeSpaceLong" : "56",
+      "FreeSpaceLong" : "57",
       "LongCapacity" : "85"
     }
   }, {
@@ -890,7 +890,7 @@
       "coordinates" : [ 52.378312, 4.897636 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:28:16Z",
+      "PubDate" : "2026-11-23T12:34:46Z",
       "Name" : "FP-016_ Stationsplein ",
       "Type" : "parkinglocation",
       "State" : "ok",
@@ -908,12 +908,12 @@
       "coordinates" : [ 52.340091, 4.873098 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:28:16Z",
+      "PubDate" : "2026-11-23T12:34:46Z",
       "Name" : "FP-010_ Zuidplein ",
       "Type" : "parkinglocation",
       "State" : "ok",
       "Status" : "GETAL",
-      "FreeSpaceShort" : "279",
+      "FreeSpaceShort" : "273",
       "ShortCapacity" : "893",
       "FreeSpaceLong" : "",
       "LongCapacity" : ""
@@ -926,12 +926,12 @@
       "coordinates" : [ 52.36981, 4.90857 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:28:16Z",
+      "PubDate" : "2026-11-23T12:35:16Z",
       "Name" : "P-112_ Markenhoven",
       "Type" : "parkinglocation",
       "State" : "ok",
       "Status" : "VOL",
-      "FreeSpaceShort" : "416",
+      "FreeSpaceShort" : "421",
       "ShortCapacity" : "651",
       "FreeSpaceLong" : "40",
       "LongCapacity" : "78"
@@ -944,12 +944,12 @@
       "coordinates" : [ 52.36997229332387, 4.969892532348648 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:27:57Z",
+      "PubDate" : "2026-11-23T12:34:57Z",
       "Name" : "PR-005_ Zeeburg 3",
       "Type" : "parkinglocation",
       "State" : "ok",
       "Status" : "VRIJ",
-      "FreeSpaceShort" : "179",
+      "FreeSpaceShort" : "173",
       "ShortCapacity" : "265",
       "FreeSpaceLong" : "0",
       "LongCapacity" : "0"
@@ -962,12 +962,12 @@
       "coordinates" : [ 52.403327, 4.93404 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:28:16Z",
+      "PubDate" : "2026-11-23T12:35:16Z",
       "Name" : "PR-007_ Noord",
       "Type" : "parkinglocation",
       "State" : "ok",
       "Status" : "VRIJ",
-      "FreeSpaceShort" : "19",
+      "FreeSpaceShort" : "21",
       "ShortCapacity" : "409",
       "FreeSpaceLong" : "15",
       "LongCapacity" : "20"
@@ -980,14 +980,14 @@
       "coordinates" : [ 52.343, 4.8536 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:28:16Z",
+      "PubDate" : "2026-11-23T12:35:16Z",
       "Name" : "P-102_ Olympisch Stadion",
       "Type" : "parkinglocation",
       "State" : "ok",
       "Status" : "GETAL",
-      "FreeSpaceShort" : "22",
+      "FreeSpaceShort" : "4",
       "ShortCapacity" : "250",
-      "FreeSpaceLong" : "23",
+      "FreeSpaceLong" : "18",
       "LongCapacity" : "200"
     }
   }, {
@@ -998,7 +998,7 @@
       "coordinates" : [ 52.37933, 4.84537 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:24:16Z",
+      "PubDate" : "2026-11-23T12:34:16Z",
       "Name" : "PR-008_  Bos en Lommer (opendata)",
       "Type" : "parkinglocation",
       "State" : "ok",
@@ -1016,12 +1016,12 @@
       "coordinates" : [ 52.399555404409604, 4.938552465637214 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:28:16Z",
+      "PubDate" : "2026-11-23T12:35:16Z",
       "Name" : "PR-006_ Boven 't Y",
       "Type" : "parkinglocation",
       "State" : "ok",
       "Status" : "GETAL",
-      "FreeSpaceShort" : "270",
+      "FreeSpaceShort" : "251",
       "ShortCapacity" : "328",
       "FreeSpaceLong" : "",
       "LongCapacity" : ""
@@ -1034,12 +1034,12 @@
       "coordinates" : [ 52.39009, 4.83811 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:28:16Z",
+      "PubDate" : "2026-11-23T12:35:16Z",
       "Name" : "PR-001_ Sloterdijk",
       "Type" : "parkinglocation",
       "State" : "ok",
       "Status" : "GETAL",
-      "FreeSpaceShort" : "47",
+      "FreeSpaceShort" : "38",
       "ShortCapacity" : "190",
       "FreeSpaceLong" : "5",
       "LongCapacity" : "5"
@@ -1052,12 +1052,12 @@
       "coordinates" : [ 52.36921, 4.90437 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:28:16Z",
+      "PubDate" : "2026-11-23T12:35:16Z",
       "Name" : "P-111_ Waterlooplein (opendata)",
       "Type" : "parkinglocation",
       "State" : "ok",
       "Status" : "GETAL",
-      "FreeSpaceShort" : "99",
+      "FreeSpaceShort" : "94",
       "ShortCapacity" : "200",
       "FreeSpaceLong" : "",
       "LongCapacity" : ""
@@ -1070,12 +1070,12 @@
       "coordinates" : [ 52.35726, 4.87944 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:28:16Z",
+      "PubDate" : "2026-11-23T12:35:16Z",
       "Name" : "P-107_ Museumplein (opendata)",
       "Type" : "parkinglocation",
       "State" : "ok",
       "Status" : "GETAL",
-      "FreeSpaceShort" : "340",
+      "FreeSpaceShort" : "316",
       "ShortCapacity" : "573",
       "FreeSpaceLong" : "",
       "LongCapacity" : ""
@@ -1088,7 +1088,7 @@
       "coordinates" : [ 52.339910877885664, 4.869230071197497 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:28:16Z",
+      "PubDate" : "2026-11-23T12:34:46Z",
       "Name" : "TEST  FP-020_ Brittenstalling",
       "Type" : "parkinglocation",
       "State" : "ok",
@@ -1106,14 +1106,14 @@
       "coordinates" : [ 52.37788, 4.91739 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:28:16Z",
+      "PubDate" : "2026-11-23T12:35:16Z",
       "Name" : "P-103_ Piet Hein",
       "Type" : "parkinglocation",
       "State" : "ok",
       "Status" : "GETAL",
-      "FreeSpaceShort" : "420",
+      "FreeSpaceShort" : "418",
       "ShortCapacity" : "562",
-      "FreeSpaceLong" : "102",
+      "FreeSpaceLong" : "100",
       "LongCapacity" : "151"
     }
   }, {
@@ -1124,12 +1124,12 @@
       "coordinates" : [ 52.37907, 4.89722 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:28:16Z",
+      "PubDate" : "2026-11-23T12:35:16Z",
       "Name" : "P-104_ Amsterdam Centraal (opendata)",
       "Type" : "parkinglocation",
       "State" : "ok",
       "Status" : "GETAL",
-      "FreeSpaceShort" : "358",
+      "FreeSpaceShort" : "353",
       "ShortCapacity" : "410",
       "FreeSpaceLong" : "",
       "LongCapacity" : ""
@@ -1142,12 +1142,12 @@
       "coordinates" : [ 52.367738, 4.868062 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:28:16Z",
+      "PubDate" : "2026-11-23T12:35:16Z",
       "Name" : "P-132_ De Hallen",
       "Type" : "parkinglocation",
       "State" : "ok",
       "Status" : "GETAL",
-      "FreeSpaceShort" : "56",
+      "FreeSpaceShort" : "58",
       "ShortCapacity" : "110",
       "FreeSpaceLong" : "93",
       "LongCapacity" : "110"
@@ -1160,12 +1160,12 @@
       "coordinates" : [ 52.37447406778279, 4.89527102700805 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:28:16Z",
+      "PubDate" : "2026-11-23T12:34:46Z",
       "Name" : "FP-008_ Beursplein ",
       "Type" : "parkinglocation",
       "State" : "ok",
       "Status" : "GETAL",
-      "FreeSpaceShort" : "971",
+      "FreeSpaceShort" : "956",
       "ShortCapacity" : "1685",
       "FreeSpaceLong" : "",
       "LongCapacity" : ""
@@ -1178,14 +1178,14 @@
       "coordinates" : [ 52.31522, 4.94731 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:28:16Z",
+      "PubDate" : "2026-11-23T12:35:16Z",
       "Name" : "P-218_ P18 HvA/ROC",
       "Type" : "parkinglocation",
       "State" : "ok",
       "Status" : "GETAL",
-      "FreeSpaceShort" : "127",
+      "FreeSpaceShort" : "131",
       "ShortCapacity" : "290",
-      "FreeSpaceLong" : "1",
+      "FreeSpaceLong" : "4",
       "LongCapacity" : "25"
     }
   }, {
@@ -1196,7 +1196,7 @@
       "coordinates" : [ 52.3125, 4.94441 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:24:49Z",
+      "PubDate" : "2026-11-23T12:34:49Z",
       "Name" : "P-206_ P6 de Uitgaansdriehoek",
       "Type" : "parkinglocation",
       "State" : "error",
@@ -1214,14 +1214,14 @@
       "coordinates" : [ 52.3849, 4.88464 ]
     },
     "properties" : {
-      "PubDate" : "2026-11-23T11:28:16Z",
+      "PubDate" : "2026-11-23T12:35:16Z",
       "Name" : "P-117_ Willemspoort",
       "Type" : "parkinglocation",
       "State" : "ok",
       "Status" : "GETAL",
       "FreeSpaceShort" : "11",
       "ShortCapacity" : "165",
-      "FreeSpaceLong" : "25",
+      "FreeSpaceLong" : "26",
       "LongCapacity" : "40"
     }
   } ]
